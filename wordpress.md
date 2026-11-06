@@ -11,11 +11,11 @@ Deploying WordPress on Rocky Linux v10.2 AMD/Intel (x86_64) with nginx version ?
 Our topology consists of two Rocky Linux machines of the mentioned version: one machine for installing Nginx and WordPress itself, and the other for installing the database, and finally connecting the two together.
 ```text
                         Web Browser
-                    +----------------+
-                    |IP:             |    
-                    |    SUCCESS     |   
-                    |                |
-                    +----------------+
+                    +--------------------+
+                    |IP: 192.168.114.130 |    
+                    |      SUCCESS       |   
+                    |     WORDPRESS      |
+                    +--------------------+
                             |
                             |
                             |
@@ -25,7 +25,7 @@ nginx server(wordpress)     |        database server
 +-------------------+       |        +---------------------+
 | Rocky 10.2 server |       |        |  Rocky 10.2 server  |
 |  -nginx  v?       |       |        |  -MariaDB  v?       | 
-|  -IP=             |-------|--------|  -IP=               |
+|  -IP=114.130      |-------|--------|  -IP=114.131        |
 |  -port 443        |                |  -SElinux ✅       |
 |  -SElinux ✅     |                |  -firewall ✅       | 
 |  -firewall ✅    |                |                     |    
@@ -36,7 +36,7 @@ We did this project on VMware Workstation v26.0.1. Both of our machines have 2 C
 #### OS : Rocky linux 10.2 AMD/intel(X86_64) (DVD ISO)
 #### Hardware Resources : 2 vCORE CPU , 2G RAM , 20G Disk
 #### Network Adapter(s):
-    ens33 = 192....
+    ens33 = 192.168.X.X/24
 
 ## 🚀 Step-by-Step Installation
 Our focus is not very much on how to partition the disk, so we leave it to Linux to do automatically. We assign an IP address to the network interface, choose an appropriate hostname, and let it install.
