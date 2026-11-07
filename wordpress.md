@@ -118,8 +118,11 @@ phpinfo()
 ```
 ## 🪪 enable 443 and SSL/TLS
 We create a self-signed certificate using OpenSSL.
-
-First, create a directory to store the key and certificate:
+install openssl
+```text
+sudo dnf install openssl
+```
+After, create a directory to store the key and certificate:
 ```text 
 sudo mkdir -p /etc/nginx/ssl
 ```
